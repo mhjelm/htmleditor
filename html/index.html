@@ -2,6 +2,9 @@
 <head>
     <title>Editor</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <script src="../node_modules/requirejs/require.js" ></script>
+    <script src="../build/require-config.js"></script>
+    <!-- <script src="../build/src/main.js"></script> -->
 </head>
 <html style="height:80%; width:100%">
 <body >
@@ -9,10 +12,10 @@
     <br>
     <appcontainer >
         <componentframe style="display: inline-block; width:45%;height:100%;border:1px solid black">
-            <placeholder>Editor placeholder</placeholder>
+            <placeholder id="editor">Editor placeholder</placeholder>
         </componentframe>
         <componentframe style="display: inline-block;width:45%;height:100%;border:1px solid black">
-            <placeholder>Result placeholder</placeholder>
+            <placeholder id="result">Result placeholder</placeholder>
         </componentframe>
      </appcontainer>
 
