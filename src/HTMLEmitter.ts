@@ -9,6 +9,9 @@ export class HTMLEmitter extends MyElement
         this.createElement('div',null); 
         //this.element.innerHTML = "HTMLEmitter";
     }
+    emit(html: string): any {
+        console.log("emit:",html);
+    }
     
 }
 

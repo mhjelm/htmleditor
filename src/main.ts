@@ -4,8 +4,8 @@ import { HTMLEmitter } from "./HTMLEmitter";
 
 console.log('main loaded')
 
-let editor = new Editor();
 let emitter = new HTMLEmitter();
+let editor = new Editor(emitter);
 
 MyElement.createFrom( document.querySelector('#editor') )
     .replace(editor);

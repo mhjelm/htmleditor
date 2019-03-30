@@ -1,11 +1,14 @@
 import { MyElement } from "./Element";
+import { HTMLEmitter } from "./HTMLEmitter";
 
 export class Editor extends MyElement
 {
-    constructor()
+    emitter:HTMLEmitter;
+
+    constructor(emitter: HTMLEmitter)
     {
-        console.log('ctor');
         super();
+        this.emitter = emitter;
 
         this.createElement('textarea',{
             style:
@@ -17,7 +20,7 @@ export class Editor extends MyElement
         //this.element.innerHTML = "";
         this.onKeyDown(e => {
             if(e.keyCode === 13 && e.ctrlKey === true)
-                console.log('keydown',e);
+                this.emitter.emit("bogaloo");
         })
         
 
