@@ -1,0 +1,14 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  placeholder {
+      color: rgb(73, 64, 64);
+  }
+
+  appcontainer {
+    width: 100%;
+    height: 100%;
+  }
