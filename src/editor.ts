@@ -1,4 +1,4 @@
-import { MyElement } from "./element";
+import { MyElement } from "./Element";
 
 export class Editor extends MyElement
 {
@@ -7,15 +7,17 @@ export class Editor extends MyElement
         console.log('ctor');
         super();
 
-        this.createElement('div',null); // todo: figure out how to create overload..
+        this.createElement('textarea',{
+            style:
+            {
+                width: '100%',
+                height: '100%'
+            }
+        }); 
         this.element.innerHTML = "sadfdfda";
         
 
         
-    }
-    
-    ping(): any {
-        console.log('pong');
     }
 
 }

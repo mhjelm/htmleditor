@@ -1,10 +1,13 @@
-import {Editor} from "./editor";
-import { MyElement } from "./element";
+import {Editor} from "./Editor";
+import { MyElement } from "./Element";
+import { HTMLEmitter } from "./HTMLEmitter";
 
 console.log('main loaded')
 
-let ed = new Editor();
-ed.ping();
+let editor = new Editor();
+let emitter = new HTMLEmitter();
 
 MyElement.createFrom( document.querySelector('#editor') )
-    .replace(ed);
+    .replace(editor);
+MyElement.createFrom( document.querySelector('#result') )
+    .replace(emitter);

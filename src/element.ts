@@ -2,17 +2,26 @@ import { IElement } from "./IElement";
 
 export class MyElement implements IElement
 {
-    getDOMElement(): Element {
-        return this.element;
-    }
     element:Element;
 
     constructor(element:Element|null = null)
     {
         this.element = element;
     }
-    createElement(type: string, opts: object | null): void {
+    getDOMElement(): Element {
+        return this.element;
+    }
+    createElement(type: string, opts: any): void {
         this.element = document.createElement(type);
+        if(opts && opts.style)
+            this.setStyle(opts.style);
+    }
+    setStyle(style:any):void
+    {
+        let el = <HTMLElement>this.element;
+        Object.keys(style).forEach(s => {
+            el.style[s] = style[s];
+        });
     }
     replace(replaceEl: IElement): void {
         if(replaceEl === null )
