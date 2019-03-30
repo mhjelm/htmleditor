@@ -6,8 +6,8 @@ export class HTMLEmitter extends MyElement
     {
         super();
 
-        this.createElement('div',null); // todo: figure out how to create overload..
-        this.element.innerHTML = "HTMLEmitter";
+        this.createElement('div',null); 
+        //this.element.innerHTML = "HTMLEmitter";
     }
     
 }

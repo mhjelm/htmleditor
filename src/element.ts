@@ -39,6 +39,10 @@ export class MyElement implements IElement
     inject(parentel: IElement): void {
         throw new Error("Method not implemented.");
     }
+    onKeyDown(handler:(ev:any)=>void)
+    {
+        this.element.addEventListener('keydown',handler);
+    }
 
     public static createFrom(domEl:Element|null):IElement
     {

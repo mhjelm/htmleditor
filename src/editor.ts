@@ -14,7 +14,11 @@ export class Editor extends MyElement
                 height: '100%'
             }
         }); 
-        this.element.innerHTML = "sadfdfda";
+        //this.element.innerHTML = "";
+        this.onKeyDown(e => {
+            if(e.keyCode === 13 && e.ctrlKey === true)
+                console.log('keydown',e);
+        })
         
 
         
