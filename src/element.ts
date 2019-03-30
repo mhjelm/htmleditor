@@ -8,8 +8,9 @@ export class MyElement implements IElement
     {
         this.element = element;
     }
-    getDOMElement(): Element {
-        return this.element;
+    getDOMElement(): HTMLElement
+    {
+        return <HTMLElement>this.element;
     }
     createElement(type: string, opts: any): void {
         this.element = document.createElement(type);

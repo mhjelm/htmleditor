@@ -20,7 +20,7 @@ export class Editor extends MyElement
         //this.element.innerHTML = "";
         this.onKeyDown(e => {
             if(e.keyCode === 13 && e.ctrlKey === true)
-                this.emitter.emit("bogaloo");
+                this.emitter.emit((<HTMLInputElement>this.getDOMElement()).value);
         })
         
 
